@@ -5,7 +5,7 @@ module.exports = defineConfig({
   devServer:{
     // port: 8081,
     proxy: {
-      '/api': { // 'api'로 들어오면 포트 8081(spring server)로 보냄
+      '/': { // 'api'로 들어오면 포트 8081(spring server)로 보냄
         target: 'http://localhost:8081',
         changeOrigin: true // cross origin 허용(서로 다른 출처의 리소스를 공유한다)
       }
